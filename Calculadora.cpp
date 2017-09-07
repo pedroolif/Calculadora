@@ -1,30 +1,68 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
-	int op, a, b;
-	
-	printf("-- MINICURSO -- INTRODUCAO AO CONTROLE DE VERSAO C/ GIT -- \n\t -- CALCULADORA SIMPLES EM C -- ");
-	
-	printf("MENU -- \n\n\n 1 - SOMA \n 2 - SUBTRACAO \n 3 - MULTIPLICACAO \n 4 - DIVISAO \n\n DIGITE O NUMERO DA OPERACAO DESEJADA:  ");
+
+	int op, a, b ,res;
+
+	printf("MENU -- \n\n\n 1 - SUMA \n 2 - RESTA \n 3 - MULTIPLICACION \n 4 - DIVISION \n 5 - RAIZ CUADRADA \n 6 - SENO/COSENO \n\n DIGITE EL NUMERO DE LA OPERACION DESEADA:  ");
 	scanf("%d",&op);
-	printf("Digite os numeros desejados: ");
+	if(op == 1){
+    printf("Digite los numeros deseados: ");
 	scanf("%d",&a);
-	system("cls");
-	printf("Digite os numeros desejados: ");
-	scanf("%d",&b);
-	system("cls");
-	if(op == 1)
-		op = a+b;
-	else if(op == 2)
-	 	op = a-b;
-	else if(op == 3)
-		op = a*b;
-	else if(op == 4)
-		op = a/b;
-		
-	printf("O resultado da operacao e: %d\n\n",op);
-	
-	system("pause");
+    printf("Digite los numeros deseados: ");
+    scanf("%d",&b);
+    res = a+b;
+    printf("El resultado es: %d\n\n",res);
+    }
+
+	else if(op == 2){
+    printf("Digite los numeros deseados: ");
+	scanf("%d",&a);
+    printf("Digite los numeros deseados: ");
+    scanf("%d",&b);
+    res = a-b;
+    printf("El resultado es: %d\n\n",res);
+    }
+	else if(op == 3){
+    printf("Digite los numeros deseados: ");
+	scanf("%d",&a);
+    printf("Digite los numeros deseados: ");
+    scanf("%d",&b);
+    res = a*b;
+    printf("El resultado es: %d\n\n",res);
+    }
+	else if(op == 4){
+    printf("Digite los numeros deseados: ");
+	scanf("%d",&a);
+    printf("Digite los numeros deseados: ");
+    scanf("%d",&b);
+    res = a/b;
+    }
+    else if (op == 5){
+    printf("Digite los numeros deseados: ");
+	scanf("%d",&a);
+    res=sqrt(a);
+    printf("El resultado es: %d\n\n",res);
+    }
+    else if (op == 6){
+        double res1;
+        int op2;
+        printf("1- Seno \n2- Coseno \n");
+        scanf("%d",&op2);
+        printf("Digite los numeros deseados: ");
+        scanf("%d",&a);
+
+        if (op2 == 1){
+            res1=sin(a);
+            printf("El seno es  %.5f\t", res1);
+        }
+        if (op2 ==2){
+            res1=cos(a);
+            printf("El coseno es  %.5f\t", res1);
+        }
+
+    }
 }
